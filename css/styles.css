@@ -1,0 +1,283 @@
+/* Font Face */
+@font-face{
+	font-family:"Montserrat";
+	src:url("../fonts/Montserrat-Regular.eot");
+	src:url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:"Montserrat";
+	src:url("../fonts/Montserrat-Bold.eot");
+	src:url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
+	font-weight:bold;
+	font-style:normal;
+}
+@font-face{
+	font-family:"Montserrat";
+	src:url("../fonts/Montserrat-Light.eot");
+	src:url("../fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.ttf") format("truetype");
+	font-weight:300;
+	font-style:normal;
+}
+@font-face{
+	font-family:"ArnoPro";
+	src:url("../fonts/ArnoPro-Display.eot");
+	src:url("../fonts/ArnoPro-Display.eot?#iefix") format("embedded-opentype"), url("../fonts/ArnoPro-Display.woff2") format("woff2"), url("../fonts/ArnoPro-Display.woff") format("woff"), url("../fonts/ArnoPro-Display.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+/* CSS reset */
+*{box-sizing:border-box;}
+*:focus{outline:none;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption,
+menu, footer, header, nav, section, summary, time, mark, audio, video{
+	margin:0;
+	padding:0;
+	border:0;
+}
+article, aside, canvas, figure, figure img, figcaption, footer, header, nav, section, audio, video{display:block;}
+img{
+	border-style:none;
+	vertical-align:top;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{text-decoration:underline;}
+input,
+textarea,
+select{
+	font:14px Montserrat, Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+	padding:0;
+	margin:0;
+	border-style:none;
+	-webkit-appearance:none;
+	border-radius:0;
+}
+textarea{resize:vertical;}
+label[for], input[type=checkbox], input[type=radio], input[type=submit], button, select{cursor:pointer;}
+ul{list-style:none;}
+mark{background:none;}
+h1, h2, h3, h4, h5, h6{
+	font-weight:bold;
+	line-height:normal;
+	margin-bottom:20px;
+}
+h1{font-size:30px;}
+h2{font-size:26px;}
+h3{font-size:22px;}
+h4{font-size:18px;}
+h5{font-size:14px;}
+h6{font-size:12px;}
+p{margin:0 0 18px;}
+
+/* main rules */
+html,
+body{height:100%;}
+body{
+	font:14px Montserrat, arial, helvetica, sans-serif;
+	color:#000;
+	min-width:320px;
+	background:#e6e1d3 url(../images/bg-page.jpg) repeat-x 50% 0;
+}
+.wrapper{
+	margin:0 auto;
+	max-width:1500px;
+	padding:0 15px;
+	text-align:center;
+	overflow:hidden;
+}
+.logo{
+	margin:132px auto 175px;
+	background:url(../images/logo.png) no-repeat;
+	width:236px;
+	height:144px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.logo a{
+	display:block;
+	height:100%;
+}
+.text{
+	color:#fff;
+	padding-bottom:70px;
+}
+.text h2{
+	font:65px ArnoPro, "times new roman",serif;
+	margin:0 0 70px;
+	text-shadow:0 0 20px #000;
+}
+.text dl{
+	margin:0 0 5px;
+	font-size:18px;
+}
+.text dt,
+.text dd{display:inline;}
+.text dd{font-weight:300;}
+#signup_form{
+	margin:0 auto 28px;
+	max-width:1010px;
+	padding:36px 10px 42px;
+	background:#2e353c;
+	border-radius:16px;
+	position:relative;
+}
+#signup_form label{
+	color:#fff;
+	font-size:30px;
+	margin-bottom:35px;
+	display:inline-block;
+}
+#signup_form .set{
+	overflow:hidden;
+	max-width:680px;
+	margin:0 auto;
+}
+#signup_form .holder{
+	position:relative;
+	z-index:2;
+}
+#signup_form.animated .holder{
+	z-index:1;
+	opacity:0;
+	-webkit-transform:translate(0, -50px);
+	transform:translate(0, -50px);
+}
+.success_box{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:1;
+	opacity:0;
+	-webkit-transform:translate(0, -50px);
+	transform:translate(0, -50px);
+	color:#fff;
+	font-size:30px;
+	padding:36px 15px 0;
+}
+#signup_form.animated .success_box{
+	z-index:2;
+	opacity:1;
+	-webkit-transform:translate(0, 0);
+	transform:translate(0, 0);
+	-webkit-transition:all .8s ease 0s;
+	transition:all .8s ease 0s;
+}
+#signup_form .text_field{
+	position:relative;
+	background:#fff;
+	border-radius:14px;
+	float:left;
+	width:64%;
+}
+#signup_form .text_field:after{
+	content:"";
+	position:absolute;
+	left:20px;
+	top:24px;
+	background:url(../images/ico-email.png) no-repeat;
+	width:36px;
+	height:24px;
+}
+#signup_form .text_field input{
+	background:none;
+	color:#999;
+	font-size:18px;
+	font-weight:300;
+	width:100%;
+	padding:21px 15px 25px 70px;
+	line-height:24px;
+}
+#signup_form .submit{
+	float:right;
+	width:32%;
+	padding:0;
+	height:70px;
+	border-radius:16px;
+	background:#d6b55b;
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#333;
+	font-size:18px;
+}
+#signup_form .submit:hover{background:#c7a64d;}
+#footer{
+	color:#8a867a;
+	font-size:13px;
+	padding-bottom:23px;
+	font-weight:300;
+}
+#footer p{
+	display:inline-block;
+	margin:0;
+	vertical-align:top;
+}
+#footer dl{
+	display:inline-block;
+	vertical-align:top;
+	padding-left:10px;
+	margin-left:8px;
+	position:relative;
+}
+#footer dl:after{
+	content:"";
+	position:absolute;
+	top:3px;
+	left:0;
+	width:1px;
+	height:12px;
+	background:#8a867a;
+}
+#footer dd,
+#footer dt{display:inline;}
+#footer dd a{
+	font-weight:bold;
+	color:#8a867a;
+}
+#footer dd a:hover{
+	text-decoration:none;
+	border-bottom:1px dotted #8a867a;
+}
+@media screen and (max-width:700px){
+	body{
+		background-size:cover;
+		background-repeat:repeat;;
+	}
+	.logo{
+		margin-top:50px;
+		margin-bottom:50px;
+	}
+	.text h2{
+		font-size:40px;
+		margin-bottom:30px;
+	}
+	#footer dd a,
+	#footer{color:#fff;}
+	#footer dd a{border-color:#fff;}
+	#signup_form label{font-size:20px;}
+	.success_box{
+		font-size:24px;
+		padding-top:44px;
+	}
+}
+@media screen and (max-width:500px){
+	.text{padding-bottom:40px;}
+	#signup_form label{margin-bottom:20px;}
+	#signup_form .submit,
+	#signup_form .text_field{
+		float:none;
+		width:100%;
+	}
+	#signup_form .text_field{margin-bottom:20px;}
+}
